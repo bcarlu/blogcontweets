@@ -22,7 +22,9 @@ class CreateEntriesTable extends Migration
             // Clave foranea para definir el autor
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->string('slug');
 
+            // Slug
             $table->timestamps();
         });
     }
